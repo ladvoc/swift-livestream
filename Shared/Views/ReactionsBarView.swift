@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 LiveKit
+ * Copyright 2025 LiveKit
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,9 +21,9 @@ struct ReactionsBarView: View {
     @EnvironmentObject var roomCtx: RoomContext
 
     private static let reactions = [
-        "🔥", "👏", "🤣", "❤️", "🎉"
+        "🔥", "👏", "🤣", "❤️", "🎉",
     ]
-    
+
     var body: some View {
         HStack(alignment: .center, spacing: 30) {
             ForEach(Self.reactions, id: \.self) { reaction in

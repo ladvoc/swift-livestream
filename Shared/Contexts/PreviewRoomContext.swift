@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 LiveKit
+ * Copyright 2025 LiveKit
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,29 +14,27 @@
  * limitations under the License.
  */
 
-import SwiftUI
 import LiveKit
 import LiveKitComponents
+import SwiftUI
 
 @available(iOS 18.0, macOS 15.0, *)
-fileprivate struct PreviewRoomContext: PreviewModifier {
-    
-   static func makeSharedContext() async throws -> RoomContext {
-       RoomContext()
-   }
-   
-   func body(content: Content, context: RoomContext) -> some View {
-       RoomScope(room: context.room) {
-           content
-               .environmentObject(context)
-               .environmentObject(context.room.localParticipant as Participant)
-       }
-   }
+private struct PreviewRoomContext: PreviewModifier {
+    static func makeSharedContext() async throws -> RoomContext {
+        RoomContext()
+    }
+
+    func body(content: Content, context: RoomContext) -> some View {
+        RoomScope(room: context.room) {
+            content
+                .environmentObject(context)
+                .environmentObject(context.room.localParticipant as Participant)
+        }
+    }
 }
 
 @available(iOS 18.0, macOS 15.0, *)
 extension PreviewTrait where T == Preview.ViewTraits {
-    
     /// Supplies a ``RoomContext`` and ``LiveKit/Room`` to a preview’s view hierarchy.
     static var roomContext: PreviewTrait<T> {
         modifier(PreviewRoomContext())
