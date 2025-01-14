@@ -19,35 +19,18 @@ import SwiftUI
 
 struct ReactionsBarView: View {
     @EnvironmentObject var roomCtx: RoomContext
-    @EnvironmentObject var room: Room
 
+    private static let reactions = [
+        "🔥", "👏", "🤣", "❤️", "🎉"
+    ]
+    
     var body: some View {
         HStack(alignment: .center, spacing: 30) {
-            Button(action: {
-                roomCtx.sendReaction(string: "🔥")
-            }, label: {
-                Text("🔥")
-            })
-            Button(action: {
-                roomCtx.sendReaction(string: "👏")
-            }, label: {
-                Text("👏")
-            })
-            Button(action: {
-                roomCtx.sendReaction(string: "🤣")
-            }, label: {
-                Text("🤣")
-            })
-            Button(action: {
-                roomCtx.sendReaction(string: "❤️")
-            }, label: {
-                Text("❤️")
-            })
-            Button(action: {
-                roomCtx.sendReaction(string: "🎉")
-            }, label: {
-                Text("🎉")
-            })
+            ForEach(Self.reactions, id: \.self) { reaction in
+                Button(reaction) {
+                    roomCtx.sendReaction(string: reaction)
+                }
+            }
         }
         .padding(.vertical, 15)
         .padding(.horizontal, 10)
