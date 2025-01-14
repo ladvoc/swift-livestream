@@ -50,3 +50,18 @@ extension TextLabel.Style {
         }
     }
 }
+
+#Preview("Normal") {
+    TextLabel(
+        text: "Hello, world!",
+        symbol: .handWaveFill
+    )
+}
+
+#Preview("Primary") {
+    TextLabel(
+        text: "Hello, world!",
+        symbol: .handWaveFill,
+        style: .primary
+    )
+}

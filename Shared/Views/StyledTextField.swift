@@ -68,3 +68,13 @@ struct StyledTextField: View {
 //        }
 //    }
 // }
+
+@available(iOS 18.0, macOS 15.0, *)
+#Preview {
+    @Previewable @State var contents = ""
+    StyledTextField(
+        title: "Title",
+        placeholder: "Placeholder",
+        text: $contents
+    )
+}

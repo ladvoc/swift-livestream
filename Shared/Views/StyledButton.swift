@@ -108,3 +108,45 @@ private extension StyledButtonSize {
         }
     }
 }
+
+#Preview("Default") {
+    StyledButton {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Primary") {
+    StyledButton(style: .primary) {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Secondary") {
+    StyledButton(style: .secondary) {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Destructive") {
+    StyledButton(style: .destructive) {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Clear") {
+    StyledButton(style: .clear) {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Busy") {
+    StyledButton(isBusy: true) {} label: {
+        Text("Press Me")
+    }
+}
+
+#Preview("Small") {
+    StyledButton(size: .small) {} label: {
+        Text("Press Me")
+    }
+}

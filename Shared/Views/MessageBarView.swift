@@ -87,3 +87,8 @@ struct MessageBarView: View {
         .padding(.horizontal, 10)
     }
 }
+
+@available(iOS 18.0, macOS 15.0, *)
+#Preview(traits: .roomContext) {
+    MessageBarView {}
+}

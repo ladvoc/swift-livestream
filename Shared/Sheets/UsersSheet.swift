@@ -182,3 +182,8 @@ struct UsersSheet: View {
         .frame(minWidth: 370)
     }
 }
+
+@available(iOS 18.0, macOS 15.0, *)
+#Preview(traits: .roomContext) {
+    UsersSheet()
+}
