@@ -48,6 +48,7 @@
 		68FBA3712A381F650015853E /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FBA3702A381F650015853E /* StyledButton.swift */; };
 		68FBA3732A3824020015853E /* StreamerPrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FBA3722A3824020015853E /* StreamerPrepareView.swift */; };
 		68FBA3752A3824D80015853E /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FBA3742A3824D80015853E /* StyledTextField.swift */; };
+		7B730C442D370811008B0D2E /* PreviewRoomContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B730C432D37080D008B0D2E /* PreviewRoomContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		68FBA3702A381F650015853E /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		68FBA3722A3824020015853E /* StreamerPrepareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerPrepareView.swift; sourceTree = "<group>"; };
 		68FBA3742A3824D80015853E /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		7B730C432D37080D008B0D2E /* PreviewRoomContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewRoomContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		687E311C2A2DCA0B00032AE6 /* Contexts */ = {
 			isa = PBXGroup;
 			children = (
+				7B730C432D37080D008B0D2E /* PreviewRoomContext.swift */,
 				687E311D2A2DCA1600032AE6 /* RoomContext.swift */,
 				68177E072A57055200821136 /* AppContext.swift */,
 			);
@@ -405,6 +408,7 @@
 				6829376D2A599EDD00BC8CD7 /* RoomMetadata.swift in Sources */,
 				6889F0D52A52DF62004D54FB /* InviteToStage.swift in Sources */,
 				68FBA3712A381F650015853E /* StyledButton.swift in Sources */,
+				7B730C442D370811008B0D2E /* PreviewRoomContext.swift in Sources */,
 				687E312E2A2EF39400032AE6 /* StreamEventTileView.swift in Sources */,
 				683865A52A29F9A3005D0947 /* App.swift in Sources */,
 			);
